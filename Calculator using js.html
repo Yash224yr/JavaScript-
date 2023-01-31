@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper" style="">
+        <input type="text" placeholder="Enter First Number">
+        <input type="text" placeholder="Enter Second Number">
+        <select name="" id="">
+            <option value="" selected disabled>Operation</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+            <option value="%">%</option>
+        </select>
+        <button>Calculate</button>
+        <p></p>
+    </div>
+   
+    <script>
+        let inpt=document.querySelectorAll("input")
+        let choose=document.querySelector("select")
+        let btn=document.querySelector("button")
+        let para=document.querySelector("P")
+       btn.onclick=()=>{
+       let a=inpt[0].value
+       let b=inpt[1].value
+    //     if(choose.value==='+'){
+    //         para.innerHTML=(Number(a)+Number(b))
+    //     }
+    //     else if(choose.value==='-')  {
+    //         para.innerHTML=(a-b)
+    //     }  
+    //     else if(choose.value==='/'){
+    //         para.innerHTML=(a/b)
+    //     }  
+    //     else if(choose.value==='*'){
+    //         para.innerHTML=(a*b)
+    //     }  
+    //     else if(choose.value==='%'){
+    //         para.innerHTML=(a%b)
+    //     }    
+    
+    
+    switch (choose.value){
+
+        case '+' : para.innerHTML=(Number(a)+Number(b))
+                    break;
+        case '-' : para.innerHTML=a-b
+                     break;
+        case '*' : para.innerHTML=a*b
+                    break;
+        case '/' : para.innerHTML=a/b
+                    break;
+        case '%' : para.innerHTML=a%b
+                    break;
+        default : para.innerHTML=error
+        
+    }
+    }
+    
+    </script>
+
+
+</body>
+</html>
